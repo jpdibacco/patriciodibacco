@@ -25,7 +25,7 @@ module.exports = {
           loader:"file-loader",
           options:{
           name:"[name].[ext]",
-          outputPath:"scripts",
+          outputPath:"scripts/",
           publicPath:"/scripts/"
           }
         }]

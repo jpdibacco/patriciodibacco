@@ -6,12 +6,13 @@ import './index.scss';
 import './scripts/script';
 import 'bootstrap';
 import 'particles.js';
+import './scripts/particlesjs-config.json'
 OfflinePluginRuntime.install();
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load(
     "particles-js",
-    "./scripts/particlesjs-config.json",
+    "scripts/particlesjs-config.json",
     function () {
       console.log("callback - particles.js config loaded");
     }
