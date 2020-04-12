@@ -4,6 +4,7 @@ import './fonts/libre-baskerville-v5-latin-regular.woff2';
 import './index.html';
 import './index.scss';
 import './scripts/script';
+import $ from 'jquery';
 import 'bootstrap';
 import 'particles.js';
 import './scripts/particlesjs-config.json'
@@ -17,6 +18,10 @@ particlesJS.load(
       console.log("callback - particles.js config loaded");
     }
   );
-
+$(window).on('load', function () {
+    $("#loading").fadeOut(700);
+    $('header').css('visibility','visible');
+    $('main').css('visibility','visible');
+  });
 // import 'font-awesome';
 // import 'magnific-popup';
