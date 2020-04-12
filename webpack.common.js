@@ -30,6 +30,15 @@ module.exports = {
           }
         }]
       },
+      // {
+      //   test: /\.(png|jpg)$/,
+      //   loader: 'url-loader',
+      //   options:{
+      //     name:"[name].[ext]",
+      //     outputPath:"images/",
+      //     publicPath:"/images/"
+      //   }
+      // },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
         use: [

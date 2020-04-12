@@ -7,7 +7,8 @@ import './scripts/script';
 import $ from 'jquery';
 import 'bootstrap';
 import 'particles.js';
-import './scripts/particlesjs-config.json'
+import './scripts/particlesjs-config.json';
+import imagesLoaded from './scripts/imagesloaded.pkgd.min.js';
 OfflinePluginRuntime.install();
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -22,6 +23,10 @@ $(window).on('load', function () {
     $("#loading").fadeOut(700);
     $('header').css('visibility','visible');
     $('main').css('visibility','visible');
+    imagesLoaded('.glitch__img', { background: true }, () => {
+      document.body.classList.remove('loading');
+      document.body.classList.add('imgloaded');
+    });
   });
 // import 'font-awesome';
 // import 'magnific-popup';
