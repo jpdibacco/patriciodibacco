@@ -9,8 +9,9 @@ const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/index.js",
+    home: "./src/index.js",
     vendor: "./src/vendor.js",
+    notfound:"./src/404.js"
   },
   module: {
     rules: [
@@ -93,12 +94,13 @@ module.exports = {
       filename: "index.html",
       template: "./src/index.html",
       inject: "head",
+      excludeChunks: ['notfound']
     }),
     new HtmlWebpackPlugin({
       title: "patricio-404-page",
       filename: "404.html",
       template: "./src/404.html",
-      inject: "head",
+      chunks:['notfound']
     }),
     new PreloadWebpackPlugin({
       rel: "preload",
