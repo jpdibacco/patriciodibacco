@@ -6,7 +6,7 @@ Install dependencies with command:
 
 Tu run with browser-sync use command:
 
-    node_modules/.bin/webpack-cli --watch
+    npm start
 
 To do: add webpack-merge and config files...
 
