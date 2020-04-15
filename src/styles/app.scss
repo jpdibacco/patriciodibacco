@@ -6,6 +6,7 @@
 // @import "magnific-popup";
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #000;
+$white: #FFF;
 // Loading:
 #loading{
 	background-color: #000000;
@@ -36,7 +37,7 @@ $primary-color: #000;
 .object{
 	width: 20px;
 	height: 20px;
-	background-color: #FFF;
+	background-color:$white;
 	float: left;
 	-moz-border-radius: 50% 50% 50% 50%;
 	-webkit-border-radius: 50% 50% 50% 50%;
@@ -184,12 +185,21 @@ div#particles-js{
   font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FFF;
+  color:$white
 }
 .bg-dark {
-  background-color: #000 !important;
+  background-color:$primary-color !important;
 }
 .nav-item{
   text-transform: uppercase;
   font-weight: 700;
+}
+//banner typewrite:
+.typewrite{
+	color: $white;
+}
+.typewrite:hover{
+	cursor: default;
+	text-decoration: none;
+	color:$white;
 }
