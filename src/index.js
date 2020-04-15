@@ -13,7 +13,9 @@ OfflinePluginRuntime.install();
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load("particles-js", "scripts/particlesjs-config.json", function() {
+  window.pJSDom[0].pJS.particles.color.value = "random";
   console.log("callback - particles.js config loaded");
+
 });
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
