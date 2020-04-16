@@ -9,7 +9,7 @@
     "url": "https://github.com/tr1s/tris-webpack-boilerplate"
   },
   "license": "ISC",
-  "author": "tr1s",
+  "author": "Patricio",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js --host 0.0.0.0"
