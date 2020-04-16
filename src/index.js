@@ -11,7 +11,6 @@ import "./scripts/particlesjs-config.json";
 import "./scripts/particlesjs-configmobile.json";
 import imagesLoaded from "./scripts/imagesloaded.pkgd.min.js";
 import PerfectScrollbar from 'perfect-scrollbar';
-import 'perfect-scrollbar/css/perfect-scrollbar.css';
 OfflinePluginRuntime.install();
 const ps = new PerfectScrollbar('#mainpage', {
   wheelSpeed: 3,
