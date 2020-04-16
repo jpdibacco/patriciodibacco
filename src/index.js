@@ -23,7 +23,11 @@ window.mobileCheck = function () {
 particlesJS.load("particles-js", "scripts/particlesjs-config.json", function () {
   window.pJSDom[0].pJS.particles.color.value = "random";
   console.log("callback - particles.js config loaded");
-
+  if(mobileCheck() == true){
+    //console.log('mobile detected');
+    window.pJSDom[0].pJS.particles.number.value = 20;
+    window.pJSDom[0].pJS.fn.particlesRefresh();
+  }
 });
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
@@ -68,11 +72,6 @@ TxtType.prototype.tick = function () {
   }, delta);
 };
 $(window).on("load", function () {
-  if(mobileCheck() == true){
-    console.log('mobile detected');
-    window.pJSDom[0].pJS.particles.number.value = 20;
-    window.pJSDom[0].pJS.fn.particlesRefresh();
-  }
   //window.pJSDom[0].pJS.fn.particlesRefresh();
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
