@@ -4,7 +4,7 @@ Install dependencies with command:
 
     npm install
 
-Tu run with browser-sync use command:
+Tu run with webpack use command:
 
     npm start
 
