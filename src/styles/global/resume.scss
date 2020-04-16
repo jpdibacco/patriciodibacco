@@ -1429,11 +1429,6 @@ hr {
 #resume .video-section .content-part .video-description:last-child {
   margin-bottom: 0
 }
-
-#resume .video-section .video-part .embed-responsive-item {
-  //background-image: url(../img/video.jpg)
-}
-
 #resume .video-section .video-part .embed-responsive-item:before {
   background-color: rgba(0, 0, 0, .2)
 }
@@ -1677,15 +1672,15 @@ hr {
   padding: 9px 14px
 }
 
-#contact .contact-section .contact-form .form-group .form-control:-webkit-autofill,
-#contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:active,
-#contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:focus,
-#contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:hover {
-  -webkit-box-shadow: 0 0 0 1000px #0b0b0b inset;
-  -webkit-text-fill-color: #777 !important;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s
-}
+// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill,
+// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:active,
+// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:focus,
+// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:hover {
+//   -webkit-box-shadow: 0 0 0 1000px #0b0b0b inset;
+//   -webkit-text-fill-color: #777 !important;
+//   -webkit-transition: background-color 5000s ease-in-out 0s;
+//   transition: background-color 5000s ease-in-out 0s
+// }
 
 #contact .contact-section .contact-form .form-group .form-control::-webkit-input-placeholder {
   color: #777
