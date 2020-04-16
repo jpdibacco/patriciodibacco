@@ -451,17 +451,17 @@ hr {
   height: 2px
 }
 
-.lightbox-wrapper .simplebar-track.simplebar-vertical {
-  width: 13px
-}
+// .simplebar-track.simplebar-vertical {
+//   width: 13px
+// }
 
-.lightbox-wrapper .simplebar-track.simplebar-vertical .simplebar-scrollbar {
-  right: 1px;
-  width: 9px
-}
+// .simplebar-track.simplebar-vertical .simplebar-scrollbar {
+//   right: 1px;
+//   width: 9px
+// }
 
-.lightbox-wrapper .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-  background: #3c3c3c
+.ps__thumb-y{
+  background-color: #3c3c3c !important
 }
 
 .lightbox-wrapper .lightbox-content {

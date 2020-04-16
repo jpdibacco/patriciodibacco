@@ -9,6 +9,8 @@ import "bootstrap";
 import "particles.js";
 import "./scripts/particlesjs-config.json";
 import imagesLoaded from "./scripts/imagesloaded.pkgd.min.js";
+import PerfectScrollbar from 'perfect-scrollbar';
+import 'perfect-scrollbar/css/perfect-scrollbar.css';
 OfflinePluginRuntime.install();
 
 window.mobileCheck = function () {
@@ -69,8 +71,9 @@ $(window).on("load", function () {
   if(mobileCheck() == true){
     console.log('mobile detected');
     window.pJSDom[0].pJS.particles.number.value = 20;
+    window.pJSDom[0].pJS.fn.particlesRefresh();
   }
-  window.pJSDom[0].pJS.fn.particlesRefresh();
+  //window.pJSDom[0].pJS.fn.particlesRefresh();
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
   $("main").css("visibility", "visible");
@@ -91,6 +94,11 @@ $(window).on("load", function () {
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
+  const ps = new PerfectScrollbar('#mainpage', {
+    wheelSpeed: 2,
+    wheelPropagation: true,
+    minScrollbarLength: 20
+  });
 });
 // import 'font-awesome';
 // import 'magnific-popup';
