@@ -1,212 +1,256 @@
 @import '~bootstrap/scss/bootstrap';
 @import './global/carousel.scss';
 @import './global/glitch.scss';
+@import './global/resume.scss';
 // @import "font-awesome";
 // @import "animate";
 // @import "magnific-popup";
-$font-stack:    Helvetica, sans-serif;
+$font-stack: Helvetica,
+sans-serif;
 $primary-color: #000;
 $white: #FFF;
+body{
+ background-color: #161616;
+}
+h1,h2,h3,h4,h5,p,span{
+	color:$white;
+}
 // Loading:
-#loading{
-	background-color: #000000;
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	z-index: 20;
-	margin-top: 0px;
-	top: 0px;
+#loading {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+  margin-top: 0px;
+  top: 0px;
 }
-#loading-center{
-	width: 100%;
-	height: 100%;
-	position: relative;
-	}
+
+#loading-center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 #loading-center-absolute {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	height: 60px;
-	width: 60px;
-	margin-top: -30px;
-	margin-left: -30px;
-    -webkit-animation: loading-center-absolute 1s infinite;
-	animation: loading-center-absolute 1s infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  -webkit-animation: loading-center-absolute 1s infinite;
+  animation: loading-center-absolute 1s infinite;
 
 }
-.object{
-	width: 20px;
-	height: 20px;
-	background-color:$white;
-	float: left;
-	-moz-border-radius: 50% 50% 50% 50%;
-	-webkit-border-radius: 50% 50% 50% 50%;
-	border-radius: 50% 50% 50% 50%;
-	margin-right: 20px;
-	margin-bottom: 20px;	
+
+.object {
+  width: 20px;
+  height: 20px;
+  background-color: $white;
+  float: left;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
+
 .object:nth-child(2n+0) {
-	margin-right: 0px;
+  margin-right: 0px;
 
 }
-#object_one{
-	-webkit-animation: object_one 1s infinite;
-	animation: object_one 1s infinite;
-	}
-#object_two{
-	-webkit-animation: object_two 1s infinite;
-	animation: object_two 1s infinite;
-	}	
-#object_three{
-	-webkit-animation: object_three 1s infinite;
-	animation: object_three 1s infinite;
-	}		
-#object_four{
-	-webkit-animation: object_four 1s infinite;
-	animation: object_four 1s infinite;
-	}		
-	
-@-webkit-keyframes loading-center-absolute{
-100% {
-    -ms-transform: rotate(360deg); 
-   	-webkit-transform: rotate(360deg); 
-    transform: rotate(360deg); 
-	}			
-	
-}		
-@keyframes loading-center-absolute{
-100% {
-    -ms-transform: rotate(360deg); 
-   	-webkit-transform: rotate(360deg); 
-    transform: rotate(360deg); 
-	}
-}	
-	
-	
-								
 
-@-webkit-keyframes object_one{
-50% {
-    -ms-transform: translate(20px,20px); 
-   	-webkit-transform: translate(20px,20px);
-    transform: translate(20px,20px);
-	}
-}		
-@keyframes object_one{
-50% {
-     -ms-transform: translate(20px,20px); 
-   	-webkit-transform: translate(20px,20px);
-    transform: translate(20px,20px);
-	}
+#object_one {
+  -webkit-animation: object_one 1s infinite;
+  animation: object_one 1s infinite;
 }
 
+#object_two {
+  -webkit-animation: object_two 1s infinite;
+  animation: object_two 1s infinite;
+}
 
-@-webkit-keyframes object_two{
-50% {
-    -ms-transform: translate(-20px,20px); 
-   	-webkit-transform: translate(-20px,20px);
-    transform: translate(-20px,20px);
-	}
-}		
-@keyframes object_two{
-50% {
-    -ms-transform: translate(-20px,20px); 
-   	-webkit-transform: translate(-20px,20px);
-    transform: translate(-20px,20px);
-	}
+#object_three {
+  -webkit-animation: object_three 1s infinite;
+  animation: object_three 1s infinite;
+}
+
+#object_four {
+  -webkit-animation: object_four 1s infinite;
+  animation: object_four 1s infinite;
+}
+
+@-webkit-keyframes loading-center-absolute {
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes loading-center-absolute {
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 
 
-@-webkit-keyframes object_three{
-50% {
-    -ms-transform: translate(20px,-20px); 
-   	-webkit-transform: translate(20px,-20px);
-    transform: translate(20px,-20px);
-	}
-}		
-@keyframes object_three{
-50% {
-    -ms-transform: translate(20px,-20px); 
-   	-webkit-transform: translate(20px,-20px);
-    transform: translate(20px,-20px);
-	}
+
+@-webkit-keyframes object_one {
+  50% {
+    -ms-transform: translate(20px, 20px);
+    -webkit-transform: translate(20px, 20px);
+    transform: translate(20px, 20px);
+  }
+}
+
+@keyframes object_one {
+  50% {
+    -ms-transform: translate(20px, 20px);
+    -webkit-transform: translate(20px, 20px);
+    transform: translate(20px, 20px);
+  }
+}
+
+
+@-webkit-keyframes object_two {
+  50% {
+    -ms-transform: translate(-20px, 20px);
+    -webkit-transform: translate(-20px, 20px);
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes object_two {
+  50% {
+    -ms-transform: translate(-20px, 20px);
+    -webkit-transform: translate(-20px, 20px);
+    transform: translate(-20px, 20px);
+  }
 }
 
 
 
-@-webkit-keyframes object_four{
-50% {
-    -ms-transform: translate(-20px,-20px); 
-   	-webkit-transform: translate(-20px,-20px);
-    transform: translate(-20px,-20px);
-	}
-}		
-@keyframes object_four{
-50% {
-    -ms-transform: translate(-20px,-20px); 
-   	-webkit-transform: translate(-20px,-20px);
-    transform: translate(-20px,-20px);
-	}
+@-webkit-keyframes object_three {
+  50% {
+    -ms-transform: translate(20px, -20px);
+    -webkit-transform: translate(20px, -20px);
+    transform: translate(20px, -20px);
+  }
 }
+
+@keyframes object_three {
+  50% {
+    -ms-transform: translate(20px, -20px);
+    -webkit-transform: translate(20px, -20px);
+    transform: translate(20px, -20px);
+  }
+}
+
+
+
+@-webkit-keyframes object_four {
+  50% {
+    -ms-transform: translate(-20px, -20px);
+    -webkit-transform: translate(-20px, -20px);
+    transform: translate(-20px, -20px);
+  }
+}
+
+@keyframes object_four {
+  50% {
+    -ms-transform: translate(-20px, -20px);
+    -webkit-transform: translate(-20px, -20px);
+    transform: translate(-20px, -20px);
+  }
+}
+
 //end loader
-header{
+header {
   z-index: 1;
   position: fixed;
 }
-.navbar-brand{
+
+.navbar-brand {
   font-weight: 700;
 }
-body{
+
+body {
   font-family: 'Roboto Condensed', sans-serif;
 }
+
 // end loader
 // particles
 
-div#particles-js{
+div#particles-js {
   position: absolute;
   background: transparent;
   z-index: 3;
   width: 100% !important;
   height: 100% !important;
 }
-.carousel-control-prev, .carousel-control-next{
+
+.carousel-control-prev,
+.carousel-control-next {
   z-index: 4;
 }
+
 .carousel-caption {
-//   bottom: 22rem;
+  //   bottom: 22rem;
   z-index: 2;
   // background: burlywood;
   // opacity: 0.4;
   // color: black;
   border-radius: 15px;
 }
-.carousel-caption h1{
+
+.carousel-caption h1 {
   font-size: 3.4rem;
   text-transform: uppercase;
   font-weight: 700;
-  color:$white
+  color: $white
 }
+
 .bg-dark {
-  background-color:$primary-color !important;
+  background-color: $primary-color !important;
 }
-.nav-item{
+
+.nav-item {
   text-transform: uppercase;
   font-weight: 700;
 }
+
 //banner typewrite:
-.typewrite{
-	color: $white;
+.typewrite {
+  color: $white;
 }
-.typewrite:hover{
-	cursor: default;
-	text-decoration: none;
-	color:$white;
+
+.typewrite:hover {
+  cursor: default;
+  text-decoration: none;
+  color: $white;
 }
-.disable-select{
-	user-select: none; /* supported by Chrome and Opera */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
+
+.disable-select {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+@media(max-width:362px){
+	.navbar-brand{
+		font-size: 1.1rem;
+	}
 }
