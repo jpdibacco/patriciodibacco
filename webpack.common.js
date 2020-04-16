@@ -111,7 +111,7 @@ module.exports = {
       include: "allAssets",
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: "defer",
+      defaultAttribute: "async",
     }),
     new ScriptExtHtmlWebpackPlugin({
       $: "jquery",
