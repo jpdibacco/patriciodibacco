@@ -515,20 +515,21 @@ hr {
   margin-bottom: 37px
 }
 
-.lightbox-wrapper .lightbox-content .section-heading.page-heading>.animated-bar {
-  background-color: #fff;
+.animated-bar {
+  margin:30px auto;
+  background-color: #009e66;
   content: '';
   display: block;
   height: 4px;
   left: 0;
-  margin: 0 auto 0 auto;
   position: relative;
   right: 0;
-  width: 75px
+  width: 75px;
+
 }
 
-.lightbox-wrapper .lightbox-content .section-heading.page-heading>.animated-bar:after,
-.lightbox-wrapper .lightbox-content .section-heading.page-heading>.animated-bar:before {
+.animated-bar:after,
+.animated-bar:before {
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-name: barAnimation;
@@ -545,11 +546,11 @@ hr {
   width: 4px
 }
 
-.lightbox-wrapper .lightbox-content .section-heading.page-heading>.animated-bar:before {
+.animated-bar:before {
   left: 8px
 }
 
-.lightbox-wrapper .lightbox-content .section-heading.page-heading>.animated-bar:after {
+.animated-bar:after {
   left: 0
 }
 

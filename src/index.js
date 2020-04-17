@@ -18,9 +18,9 @@ const ps = new PerfectScrollbar("#mainpage", {
   wheelPropagation: true,
   swipeEasing: true
 });
-window.mobileCheck = function() {
+window.mobileCheck = function () {
   let check = false;
-  (function(a) {
+  (function (a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
         a
@@ -37,9 +37,13 @@ let particlesConfig = "scripts/particlesjs-config.json";
 if (mobileCheck() == true) {
   console.log("load particles mobile version");
   particlesConfig = "scripts/particlesjs-configmobile.json";
+  // document.onscroll(function(){
+  //   console.log('scrolling!');
+  //   //document.body.requestFullscreen();
+  // });
 }
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", particlesConfig, function() {
+particlesJS.load("particles-js", particlesConfig, function () {
   // window.pJSDom[0].pJS.particles.color.value = "random";
   // console.log("callback - particles.js config loaded");
   // if(mobileCheck() == true){
@@ -48,7 +52,7 @@ particlesJS.load("particles-js", particlesConfig, function() {
   //   window.pJSDom[0].pJS.fn.particlesRefresh();
   // }
 });
-var TxtType = function(el, toRotate, period) {
+var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -58,7 +62,7 @@ var TxtType = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+TxtType.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -86,16 +90,18 @@ TxtType.prototype.tick = function() {
     delta = 500;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
-$(window).on("load", function() {
+$(window).on("load", function () {
   //window.pJSDom[0].pJS.fn.particlesRefresh();
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
   $("main").css("visibility", "visible");
-  imagesLoaded(".glitch__img", { background: true }, () => {
+  imagesLoaded(".glitch__img", {
+    background: true
+  }, () => {
     document.body.classList.remove("loading");
     document.body.classList.add("imgloaded");
   });
@@ -112,6 +118,51 @@ $(window).on("load", function() {
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
+  // adding filtering:
+  var $filters = $(".filter [data-filter]"),
+    $boxes = $(".boxes [data-category]");
+
+  $filters.on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+
+    $filters.removeClass("active");
+    $this.addClass("active");
+
+    var $filterColor = $this.attr("data-filter");
+
+    if ($filterColor == "all") {
+      $boxes
+        .removeClass("is-animated")
+        .fadeOut()
+        .finish()
+        .promise()
+        .done(function () {
+          $boxes.each(function (i) {
+            $(this)
+              .addClass("is-animated")
+              .delay(i++ * 200)
+              .fadeIn();
+          });
+        });
+    } else {
+      $boxes
+        .removeClass("is-animated")
+        .fadeOut()
+        .finish()
+        .promise()
+        .done(function () {
+          $boxes
+            .filter('[data-category = "' + $filterColor + '"]')
+            .each(function (i) {
+              $(this)
+                .addClass("is-animated")
+                .delay(i++ * 200)
+                .fadeIn();
+            });
+        });
+    }
+  });
 });
 // import 'font-awesome';
 // import 'magnific-popup';
