@@ -1,5 +1,4 @@
 const path = require("path");
-
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -11,25 +10,27 @@ module.exports = {
   entry: {
     home: "./src/index.js",
     vendor: "./src/vendor.js",
-    notfound:"./src/404.js"
+    notfound: "./src/404.js"
   },
   module: {
     rules: [
       {
         test: /\.txt$/,
-        use: "raw-loader",
+        use: "raw-loader"
       },
       {
-        type: 'javascript/auto',
+        type: "javascript/auto",
         test: /\.json$/,
-        use: [{
-          loader:"file-loader",
-          options:{
-          name:"[name].[ext]",
-          outputPath:"scripts/",
-          publicPath:"/scripts/"
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "scripts/",
+              publicPath: "/scripts/"
+            }
           }
-        }]
+        ]
       },
       // {
       //   test: /\.(png|jpg)$/,
@@ -49,10 +50,10 @@ module.exports = {
               esModule: false,
               name: "[name].[ext]",
               outputPath: "images/",
-              publicPath: "/images/",
-            },
-          },
-        ],
+              publicPath: "/images/"
+            }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|ttf|otf)$/,
@@ -63,10 +64,10 @@ module.exports = {
               esModule: false,
               name: "[name].[ext]",
               outputPath: "fonts/",
-              publicPath: "fonts/",
-            },
-          },
-        ],
+              publicPath: "fonts/"
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,
@@ -74,11 +75,11 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
-      },
-    ],
+            presets: ["@babel/preset-env"]
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -86,21 +87,21 @@ module.exports = {
     new CopyPlugin([
       {
         from: path.resolve(__dirname, "src", "robots.txt"),
-        to: path.resolve(__dirname, "dist", "robots.txt"),
-      },
+        to: path.resolve(__dirname, "dist", "robots.txt")
+      }
     ]),
     new HtmlWebpackPlugin({
       title: "patricio-home-page",
       filename: "index.html",
       template: "./src/index.html",
       inject: "head",
-      excludeChunks: ['notfound']
+      excludeChunks: ["notfound"]
     }),
     new HtmlWebpackPlugin({
       title: "patricio-404-page",
       filename: "404.html",
       template: "./src/404.html",
-      chunks:['notfound']
+      chunks: ["notfound"]
     }),
     new PreloadWebpackPlugin({
       rel: "preload",
@@ -108,14 +109,14 @@ module.exports = {
         if (/\.(woff|woff2|ttf|otf)$/.test(entry)) return "font";
       },
       fileWhitelist: [/\.(woff|woff2|ttf|otf)$/],
-      include: "allAssets",
+      include: "allAssets"
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: "async",
+      defaultAttribute: "async"
     }),
     new ScriptExtHtmlWebpackPlugin({
       $: "jquery",
-      jQuery: "jquery",
-    }),
-  ],
+      jQuery: "jquery"
+    })
+  ]
 };
