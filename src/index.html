@@ -2,31 +2,6 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Juan Patricio Di Bacco</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="Description"
-    content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices." />
-
-  <!-- Open Graph data / Facebook Card data -->
-  <meta property="og:title" content="Juan Patricio Di Bacco" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://github.com/tr1s/tris-webpack-boilerplate" />
-  <meta property="og:image" content="https://i.imgur.com/lxRBpeb.jpg" />
-  <meta property="og:image:alt" content="A blue package, symbolizing what webpack does." />
-  <meta property="og:description"
-    content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices." />
-
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@triscodes" />
-
-  <!-- Mobile header color for Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#2c638f" />
-  <!-- Mobile header color Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#2c638f" />
-  <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 
 <body>
@@ -62,7 +37,7 @@
       </div>
     </nav>
   </header>
-  <main role="main" style="visibility: hidden;" id="mainpage">
+  <main style="visibility: hidden;" id="mainpage">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner disable-select">
         <div id="particles-js"></div>
@@ -71,12 +46,7 @@
           <div class="container">
             <div class="carousel-caption h-100 row align-items-center justify-content-center">
               <div id="banner">
-                <h1>
-                  <a href="" class="typewrite" data-period="2000"
-                    data-type='[ "Hi, I am Patricio.", "I am Creative.", "I Love Design.", "I Love to Develop.", "Take a look at my work." ]'>
-                    <span class="wrap"></span>
-                  </a>
-                </h1>
+                <h1><a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I am Patricio.", "I am Creative.", "I Love Design.", "I Love to Develop.", "Take a look at my work." ]'><span class="wrap"></span></a></h1>
               </div>
             </div>
           </div>
@@ -294,17 +264,33 @@
                   <!-- Thumbnail list-->
                   <div class="portfolio-grid row boxes">
                     <!-- Single item-->
-                    <div class="single-item col-6 col-lg-4" data-category="design"><a
-                        class="portfolio-item" href="img/item-1.jpg" >
-                        <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="images/gallery/1.jpg">
-                          <div class="item-content">
+                    <div class="single-item col-6 col-lg-4" data-category="design">
+                      <!-- <a class="portfolio-item" href="img/item-1.jpg"> -->
+                        <!-- <div class="portfolio-wrapper"> -->
+                          <!-- <img class="img-fluid" alt="Item" src="images/gallery/1.jpg"> -->
+                          <!-- <div class="item-content">
                             <h6 class="content-title">Label Tag Mockup</h6><span class="content-more">More Info</span>
+                          </div> -->
+                          <div class="demo-3">
+                            <div class="grid">
+                              <div class="grid__item">
+                                <div class="glitch glitch--style-1">
+                                  <div class="glitch__img"></div>
+                                  <div class="glitch__img"></div>
+                                  <div class="glitch__img"></div>
+                                  <div class="glitch__img"></div>
+                                  <div class="glitch__img"></div>
+                                </div>
+                                <!-- <h2 class="grid__item-title">Prone <span>Abjectness</span></h2> -->
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </a></div>
+                        <!-- </div> -->
+                      <!-- </a> -->
+                    </div>
                     <!-- Single item-->
                     <div class="single-item col-6 col-lg-4" data-category="photos"><a class="portfolio-item"
-                        href="img/item-2.jpg" >
+                        href="img/item-2.jpg">
                         <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="images/gallery/2.jpg">
                           <div class="item-content">
                             <h6 class="content-title">3D Bag Mockup</h6><span class="content-more">More Info</span>
@@ -313,7 +299,7 @@
                       </a></div>
                     <!-- Single item-->
                     <div class="single-item col-6 col-lg-4" data-category="design"><a class="portfolio-item"
-                        href="img/item-3.jpg" >
+                        href="img/item-3.jpg">
                         <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="images/gallery/3.jpg">
                           <div class="item-content">
                             <h6 class="content-title">Modern Bag Design</h6><span class="content-more">More Info</span>
@@ -322,8 +308,9 @@
                       </a></div>
                     <!-- Single item-->
                     <div class="single-item col-6 col-lg-4" data-category="brand"><a class="portfolio-item"
-                        href="img/item-4.jpg" >
-                        <div class="portfolio-wrapper mb-lg-0"><img class="img-fluid" alt="Item" src="images/gallery/1.jpg">
+                        href="img/item-4.jpg">
+                        <div class="portfolio-wrapper mb-lg-0"><img class="img-fluid" alt="Item"
+                            src="images/gallery/1.jpg">
                           <div class="item-content">
                             <h6 class="content-title">Coffee Cup Design</h6><span class="content-more">More Info</span>
                           </div>
@@ -331,8 +318,9 @@
                       </a></div>
                     <!-- Single item-->
                     <div class="single-item col-6 col-lg-4" data-category="brand"><a class="portfolio-item"
-                        href="img/item-5.jpg" >
-                        <div class="portfolio-wrapper mb-0"><img class="img-fluid" alt="Item" src="images/gallery/2.jpg">
+                        href="img/item-5.jpg">
+                        <div class="portfolio-wrapper mb-0"><img class="img-fluid" alt="Item"
+                            src="images/gallery/2.jpg">
                           <div class="item-content">
                             <h6 class="content-title">T-Shirt Design</h6><span class="content-more">More Info</span>
                           </div>
@@ -340,8 +328,9 @@
                       </a></div>
                     <!-- Single item-->
                     <div class="single-item col-6 col-lg-4" data-category="photos"><a class="portfolio-item"
-                        href="img/item-6.jpg" >
-                        <div class="portfolio-wrapper mb-0"><img class="img-fluid" alt="Item" src="images/gallery/3.jpg">
+                        href="img/item-6.jpg">
+                        <div class="portfolio-wrapper mb-0"><img class="img-fluid" alt="Item"
+                            src="images/gallery/3.jpg">
                           <div class="item-content">
                             <h6 class="content-title">Packaging Box Mockup</h6><span class="content-more">More
                               Info</span>
@@ -420,7 +409,6 @@
     <hr class="featurette-divider" />
 
     <!-- /END THE FEATURETTES -->
-    </div>
     <!-- /.container -->
 
     <!-- FOOTER -->
