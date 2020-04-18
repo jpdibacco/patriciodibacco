@@ -14,6 +14,8 @@ import PerfectScrollbar from "perfect-scrollbar";
 import "./styles/global/perfectscrollbar.scss";
 import header from './views/header.html';
 import resume from './views/resume.html';
+import footer from './views/footer.html';
+import portfolio from './views/portfoliov2.html';
 document.head.insertAdjacentHTML('afterbegin',header);
 OfflinePluginRuntime.install();
 const ps = new PerfectScrollbar("#mainpage", {
@@ -102,6 +104,8 @@ $(window).on("load", function () {
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
   document.getElementById('resume').insertAdjacentHTML('afterbegin' , resume);
+  document.getElementById('footer').insertAdjacentHTML('afterbegin', footer);
+  document.getElementById('portfolio').insertAdjacentHTML('afterbegin', portfolio);
   $("main").css("visibility", "visible");
   imagesLoaded(".glitch__img", {
     background: true

@@ -128,10 +128,10 @@
 .grid__item-title {
 	position: absolute;
 	margin: 0;
-	font-size: 6vw;
+	font-size: 5vw;
 	color: var(--color-title);
-	font-family: 'Barlow', sans-serif;
-	font-weight: 800;
+	// font-family: 'Barlow', sans-serif;
+	font-weight: 800 !important;
 	padding: 30vh 0.5em 0;
 	top: 0;
 	pointer-events: none;
@@ -139,18 +139,26 @@
 }
 
 .grid__item:nth-child(odd) .grid__item-title {
-	right: 0;
-	text-align: right;
-	padding-top: 10vh;
+	left: -76px;
+    text-align: left;
+    padding-top: 7vh;
 }
 
 .grid__item-title span {
 	display: block;
-	position: relative;
-	font-size: 50%;
-	font-weight: 500;
-	opacity: 0;
-	color: var(--color-subtitle);
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0;
+    font-family: sans-serif;
+    padding: 5px;
+    border: solid #AA82FF 1px;
+    /* border-radius: 15px; */
+    margin-top: 70px;
+    max-width: 150px;
+    text-transform: uppercase;
+
+	// color: var(--color-subtitle);
 }
 
 .glitch:hover + .grid__item-title span {
@@ -186,16 +194,16 @@
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	background: url('./images/glitch.jpg') no-repeat 50% 0;
+	background: url('./images/gallery/2.jpg') no-repeat 50% 0;
 	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 }
 
-// .glitch--style-2 .glitch__img {
-// 	background-image: url(../img/2.jpg);
-// }
+.glitch--style-2 .glitch__img {
+	background: url('./images/gallery/3.jpg') no-repeat 50% 0;
+}
 
 // .glitch--style-3 .glitch__img {
 // 	background-image: url(../img/3.jpg);
