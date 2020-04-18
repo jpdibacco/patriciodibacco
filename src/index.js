@@ -13,6 +13,7 @@ import imagesLoaded from "./scripts/imagesloaded.pkgd.min.js";
 import PerfectScrollbar from "perfect-scrollbar";
 import "./styles/global/perfectscrollbar.scss";
 import header from './views/header.html';
+import resume from './views/resume.html';
 document.head.insertAdjacentHTML('afterbegin',header);
 OfflinePluginRuntime.install();
 const ps = new PerfectScrollbar("#mainpage", {
@@ -100,6 +101,7 @@ $(window).on("load", function () {
   //window.pJSDom[0].pJS.fn.particlesRefresh();
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
+  document.getElementById('resume').insertAdjacentHTML('afterbegin' , resume);
   $("main").css("visibility", "visible");
   imagesLoaded(".glitch__img", {
     background: true
