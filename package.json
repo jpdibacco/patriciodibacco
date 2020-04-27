@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
+    "animatedmodal": "^1.0.0",
     "autoprefixer": "^9.7.6",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^4.4.1",
