@@ -116,7 +116,9 @@ module.exports = {
     }),
     new ScriptExtHtmlWebpackPlugin({
       $: "jquery",
-      jQuery: "jquery"
+      jQuery: "jquery",
+      jquery: "jQuery",
+      "window.jQuery": "jquery"
     })
   ]
 };
