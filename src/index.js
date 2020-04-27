@@ -16,6 +16,8 @@ import header from './views/header.html';
 import resume from './views/resume.html';
 import footer from './views/footer.html';
 import portfolio from './views/portfoliov2.html';
+import globalgamejam from './views/global_game_jam.html';
+
 document.head.insertAdjacentHTML('afterbegin',header);
 OfflinePluginRuntime.install();
 const ps = new PerfectScrollbar("#mainpage", {
@@ -170,6 +172,11 @@ $(window).on("load", function () {
             });
         });
     }
+  });
+  $('.container-overlay #globalgamejam').append(globalgamejam);
+  $('.demo-3').on('click', function() {
+    $('#overlay-effect').addClass('animate-up');
+    $('#globalgamejam').delay(700).show(300);
   });
 });
 // import 'font-awesome';

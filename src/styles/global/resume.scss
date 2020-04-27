@@ -1,6 +1,6 @@
-#resume{
-    margin: 70px 0;
-    padding: 0 120px;
+#resume {
+  margin: 70px 0;
+  padding: 0 120px;
 }
 
 i.icon {
@@ -374,7 +374,12 @@ hr {
 
 .lightbox-wrapper {
   background-color: #101010;
-  position: fixed
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 
 .lightbox-wrapper .lightbox-close {
@@ -465,22 +470,26 @@ hr {
 .ps .ps__rail-y:focus,
 .ps .ps__rail-x.ps--clicking,
 .ps .ps__rail-y.ps--clicking {
-    background-color: #161616 !important;
+  background-color: #161616 !important;
 }
-.ps__thumb-y{
- // background-color: #3c3c3c !important
- background-color: #009e66 !important;
+
+.ps__thumb-y {
+  // background-color: #3c3c3c !important
+  background-color: #009e66 !important;
 }
-.ps__rail-x:hover > .ps__thumb-x,
-.ps__rail-x:focus > .ps__thumb-x,
-.ps__rail-x.ps--clicking .ps__thumb-x{
-    background-color: #161616 !important;
+
+.ps__rail-x:hover>.ps__thumb-x,
+.ps__rail-x:focus>.ps__thumb-x,
+.ps__rail-x.ps--clicking .ps__thumb-x {
+  background-color: #161616 !important;
 }
-.ps__rail-y:hover > .ps__thumb-y,
-.ps__rail-y:focus > .ps__thumb-y,
+
+.ps__rail-y:hover>.ps__thumb-y,
+.ps__rail-y:focus>.ps__thumb-y,
 .ps__rail-y.ps--clicking .ps__thumb-y {
-    background-color: #009e66 !important;
+  background-color: #009e66 !important;
 }
+
 .lightbox-wrapper .lightbox-content {
   margin: 70px 0
 }
@@ -516,7 +525,7 @@ hr {
 }
 
 .animated-bar {
-  margin:30px auto;
+  margin: 30px auto;
   background-color: #009e66;
   content: '';
   display: block;
@@ -1386,9 +1395,12 @@ hr {
     margin-bottom: 60px
   }
 }
-#resume .skills-section, #resume .resume-section{
-    margin-top: 50px;
+
+#resume .skills-section,
+#resume .resume-section {
+  margin-top: 50px;
 }
+
 #resume .skills-section .single-skill:not(:last-child) {
   margin-bottom: 42px;
 }
@@ -1447,6 +1459,7 @@ hr {
 #resume .video-section .content-part .video-description:last-child {
   margin-bottom: 0
 }
+
 #resume .video-section .video-part .embed-responsive-item:before {
   background-color: rgba(0, 0, 0, .2)
 }
@@ -2058,6 +2071,7 @@ a:not(.btn):hover {
   border-color: #005235 !important;
   box-shadow: none !important
 }
+
 #resume .resume-section .resume-item {
   border-left-color: #009e66
 }
@@ -2099,26 +2113,29 @@ a:not(.btn):hover {
 #contact .contact-section .contact-info .list-info .info-icon i {
   color: #009e66
 }
+
 .row {
-    -ms-flex-wrap: wrap;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+  -ms-flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
-.section-heading{
-    text-align: center;
-    margin-bottom: 50px;
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
 
 }
-.section-heading h2{
-    font-size: 3.2rem;
-    display: inline-block;
-    font-weight: 700;
-    letter-spacing: -.25px;
-    line-height: 100%;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 9;
+
+.section-heading h2 {
+  font-size: 3.2rem;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -.25px;
+  line-height: 100%;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 9;
 }

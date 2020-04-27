@@ -5,13 +5,16 @@
 // @import "font-awesome";
 // @import "animate";
 // @import "magnific-popup";
-$font-stack: Helvetica, sans-serif;
+$font-stack: Helvetica,
+sans-serif;
 $primary-color: #000;
 $white: #fff;
+
 body {
   background-color: #161616;
   overflow: hidden;
 }
+
 h1,
 h2,
 h3,
@@ -21,6 +24,7 @@ p,
 span {
   color: $white;
 }
+
 // span.wrap{
 //   color: #009E66;
 // }
@@ -247,21 +251,124 @@ div#particles-js {
   -ms-user-select: none;
   /* Internet Explorer/Edge */
 }
+
 #mainpage {
-	position: relative;
-	height: 100vh;
-	width: 100%;
-	margin-top: 38px;
-  }
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin-top: 38px;
+}
+
 @media (max-width: 362px) {
   .navbar-brand {
     font-size: 1.1rem;
   }
+
   #mainpage {
-	margin-top: 39px;
-//    overflow: visible !important;
-   display: block;
-   position: absolute;
+    margin-top: 39px;
+    //    overflow: visible !important;
+    display: block;
+    position: absolute;
   }
-  
+
+}
+
+@-webkit-keyframes overlayEffectUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+  }
+
+  35%,
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+  }
+}
+
+@keyframes overlayEffectUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+  }
+
+  35%,
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+  }
+}
+
+@-webkit-keyframes overlayEffectDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+  }
+
+  35%,
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+  }
+}
+
+@keyframes overlayEffectDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+  }
+
+  35%,
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+  }
+}
+
+#overlay-effect {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-transform: translateY(100%);
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  background-color: #181818;
+  bottom: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  transform: translateY(100%);
+  width: 100%;
+  z-index: 99999;
+}
+
+#overlay-effect.animate-up {
+  -webkit-animation-name: overlayEffectUp;
+  animation-name: overlayEffectUp
+}
+
+#overlay-effect.animate-down {
+  -webkit-animation-name: overlayEffectDown;
+  animation-name: overlayEffectDown
 }
