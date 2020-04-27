@@ -175,8 +175,12 @@ $(window).on("load", function () {
   });
   $('.container-overlay #globalgamejam').append(globalgamejam);
   $('.demo-3').on('click', function() {
-    $('#overlay-effect').addClass('animate-up');
+    $('#overlay-effect').removeClass('animate-down').addClass('animate-up');
     $('#globalgamejam').delay(700).show(300);
+  });
+  $('.close-btn').on('click', function(){
+    $('#overlay-effect').removeClass('animate-up').addClass('animate-down');
+    $('.container-overlay').children().delay(700).hide(300);
   });
 });
 // import 'font-awesome';
