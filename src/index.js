@@ -196,7 +196,7 @@ $(window).on("load", function() {
       beforeOpen: function(){
         $('#overlay-effect').addClass('animate-up').removeClass('animate-down');
       },
-      animationDelay:'.5s',
+      animationDelay:'1s',
       animationFillMode: 'both',
       afterOpen: function() {
         $("#" + this.modalTarget).css({
