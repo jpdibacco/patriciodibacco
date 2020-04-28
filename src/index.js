@@ -14,6 +14,7 @@ import imagesLoaded from "./scripts/imagesloaded.pkgd.min.js";
 import PerfectScrollbar from "perfect-scrollbar";
 import "./styles/global/perfectscrollbar.scss";
 import header from "./views/header.html";
+import navbar from "./views/navbar.html";
 import resume from "./views/resume.html";
 import footer from "./views/footer.html";
 import portfolio from "./views/portfoliov2.html";
@@ -21,6 +22,7 @@ import globalgamejam from "./views/global_game_jam.html";
 import "animate.css";
 
 document.head.insertAdjacentHTML("afterbegin", header);
+document.getElementById('navigation').insertAdjacentHTML('afterbegin', navbar);
 OfflinePluginRuntime.install();
 const ps = new PerfectScrollbar("#mainpage", {
   wheelSpeed: 3,
@@ -187,38 +189,34 @@ $(window).on("load", function() {
   //$(".demo-3").on("click", function() {
     //$("#globalgamejam").show();
     console.log("test");
-    $("#demo01").animatedModal();
-    // $("#globalgamejam_link").animatedModal();
-    // $("#globalgamejam").animatedModal({
-    //   beforeOpen: function() {
-    //     console.log('does this work?');
-    //     $("#overlay-effect")
-    //       .addClass("animate-up")
-    //       .removeClass("animate-down"),
-    //       $("#" + this.modalTarget).css({
-    //         animationDelay: ".5s",
-    //         animationFillMode: "both"
-    //       });
-    //   },
-    //   animatedIn: "fadeIn",
-    //   animatedOut: "fadeOut",
-    //   animationDuration: "0s"
-    // });
-    // $('#overlay-effect').animatedModal({
-    //   beforeOpen:function(){
-    //     console.log('test');
-    //   }
-
-    // });
-    // $('#overlay-effect').removeClass('animate-down').addClass('animate-up');
-    // $('#globalgamejam').delay(550).show(500);
- // });
-  $(".close-btn").on("click", function() {
-    //$('#overlay-effect').removeClass('animate-up').addClass('animate-down');
-    // $(".container-overlay")
-    //   .children()
-    //   .hide();
-  });
+    $("#demo01").animatedModal({
+      animatedIn: 'fadeIn',
+      animatedOut: 'fadeOut',
+      animationDuration: '0s',
+      beforeOpen: function(){
+        $('#overlay-effect').addClass('animate-up').removeClass('animate-down');
+      },
+      animationDelay:'.5s',
+      animationFillMode: 'both',
+      afterOpen: function() {
+        $("#" + this.modalTarget).css({
+            animationFillMode: "none"
+        })
+      },
+      beforeClose: function() {
+        $("#overlay-effect").addClass("animate-down").removeClass("animate-up"); 
+        $("#" + this.modalTarget).css({
+            animationDelay: ".5s",
+            animationFillMode: "both"
+        })
+      },
+      afterClose: function() {
+        $("#" + this.modalTarget).css({
+            animationFillMode: "none",
+            opacity:0
+        })
+      }
+    });
 });
 // import 'font-awesome';
 // import 'magnific-popup';
