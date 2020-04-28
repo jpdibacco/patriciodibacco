@@ -379,7 +379,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .lightbox-wrapper .lightbox-close {
@@ -389,7 +389,10 @@ hr {
   z-index: 99
 }
 
-.lightbox-wrapper .lightbox-close .close-btn {
+.close-animatedModal {
+  right: 4vw;
+  top: 35px;
+  z-index: 9999;
   -ms-flex-direction: column;
   -ms-flex-pack: justify;
   -ms-flex-pack: center;
@@ -400,13 +403,13 @@ hr {
   height: 19px;
   justify-content: space-between;
   justify-content: center;
-  position: relative;
+  position: absolute;
   width: 30px
 }
 
-.lightbox-wrapper .lightbox-close .close-btn .btn-line,
-.lightbox-wrapper .lightbox-close .close-btn:after,
-.lightbox-wrapper .lightbox-close .close-btn:before {
+ .close-animatedModal .btn-line,
+ .close-animatedModal:after,
+ .close-animatedModal:before {
   -ms-flex-item-align: end;
   align-self: flex-end;
   background-color: gray;
@@ -414,44 +417,44 @@ hr {
   width: 100%
 }
 
-.lightbox-wrapper .lightbox-close .close-btn:before {
+.close-animatedModal:before {
   content: '';
   width: 85%
 }
 
-.lightbox-wrapper .lightbox-close .close-btn:after {
+.close-animatedModal:after {
   content: ''
 }
 
-.lightbox-wrapper .lightbox-close .close-btn .btn-line {
+ .close-animatedModal .btn-line {
   width: 55%
 }
 
-.lightbox-wrapper .lightbox-close .close-btn .btn-line,
-.lightbox-wrapper .lightbox-close .close-btn:after,
-.lightbox-wrapper .lightbox-close .close-btn:before {
+.close-animatedModal .btn-line,
+.close-animatedModal:after,
+.close-animatedModal:before {
   background-color: #fff;
   position: absolute;
   width: 100%
 }
 
-.lightbox-wrapper .lightbox-close .close-btn .btn-line {
+.close-animatedModal .btn-line {
   display: none
 }
 
-.lightbox-wrapper .lightbox-close .close-btn:before {
+ .close-animatedModal:before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg)
 }
 
-.lightbox-wrapper .lightbox-close .close-btn:after {
+.close-animatedModal:after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg)
 }
 
-.lightbox-wrapper .lightbox-close .close-btn .btn-line,
-.lightbox-wrapper .lightbox-close .close-btn:after,
-.lightbox-wrapper .lightbox-close .close-btn:before {
+ .close-animatedModal .btn-line,
+ .close-animatedModal:after,
+ .close-animatedModal:before {
   background-color: #fff;
   height: 2px
 }

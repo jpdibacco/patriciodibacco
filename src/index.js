@@ -4,6 +4,7 @@ import "./fonts/libre-baskerville-v5-latin-regular.woff2";
 import "./index.html";
 import "./index.scss";
 import "./scripts/script";
+global.jQuery = require("jquery");
 import $ from "jquery";
 import "bootstrap";
 import "particles.js";
@@ -12,22 +13,23 @@ import "./scripts/particlesjs-configmobile.json";
 import imagesLoaded from "./scripts/imagesloaded.pkgd.min.js";
 import PerfectScrollbar from "perfect-scrollbar";
 import "./styles/global/perfectscrollbar.scss";
-import header from './views/header.html';
-import resume from './views/resume.html';
-import footer from './views/footer.html';
-import portfolio from './views/portfoliov2.html';
-import globalgamejam from './views/global_game_jam.html';
+import header from "./views/header.html";
+import resume from "./views/resume.html";
+import footer from "./views/footer.html";
+import portfolio from "./views/portfoliov2.html";
+import globalgamejam from "./views/global_game_jam.html";
+import "animate.css";
 
-document.head.insertAdjacentHTML('afterbegin',header);
+document.head.insertAdjacentHTML("afterbegin", header);
 OfflinePluginRuntime.install();
 const ps = new PerfectScrollbar("#mainpage", {
   wheelSpeed: 3,
   wheelPropagation: true,
   swipeEasing: true
 });
-window.mobileCheck = function () {
+window.mobileCheck = function() {
   let check = false;
-  (function (a) {
+  (function(a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
         a
@@ -50,7 +52,7 @@ if (mobileCheck() == true) {
   // });
 }
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", particlesConfig, function () {
+particlesJS.load("particles-js", particlesConfig, function() {
   // window.pJSDom[0].pJS.particles.color.value = "random";
   // console.log("callback - particles.js config loaded");
   // if(mobileCheck() == true){
@@ -59,7 +61,7 @@ particlesJS.load("particles-js", particlesConfig, function () {
   //   window.pJSDom[0].pJS.fn.particlesRefresh();
   // }
 });
-var TxtType = function (el, toRotate, period) {
+var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -69,7 +71,7 @@ var TxtType = function (el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function () {
+TxtType.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -97,24 +99,32 @@ TxtType.prototype.tick = function () {
     delta = 500;
   }
 
-  setTimeout(function () {
+  setTimeout(function() {
     that.tick();
   }, delta);
 };
-$(window).on("load", function () {
+$(window).on("load", function() {
   //window.pJSDom[0].pJS.fn.particlesRefresh();
+  require("animatedmodal");
+  //$.getScript('./scripts/animatedModal.min.js');
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
-  document.getElementById('resume').insertAdjacentHTML('afterbegin' , resume);
-  document.getElementById('footer').insertAdjacentHTML('afterbegin', footer);
-  document.getElementById('portfolio').insertAdjacentHTML('afterbegin', portfolio);
+  document.getElementById("resume").insertAdjacentHTML("afterbegin", resume);
+  document.getElementById("footer").insertAdjacentHTML("afterbegin", footer);
+  document
+    .getElementById("portfolio")
+    .insertAdjacentHTML("afterbegin", portfolio);
   $("main").css("visibility", "visible");
-  imagesLoaded(".glitch__img", {
-    background: true
-  }, () => {
-    document.body.classList.remove("loading");
-    document.body.classList.add("imgloaded");
-  });
+  imagesLoaded(
+    ".glitch__img",
+    {
+      background: true
+    },
+    () => {
+      document.body.classList.remove("loading");
+      document.body.classList.add("imgloaded");
+    }
+  );
   var elements = document.getElementsByClassName("typewrite");
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-type");
@@ -132,7 +142,7 @@ $(window).on("load", function () {
   var $filters = $(".filter [data-filter]"),
     $boxes = $(".boxes [data-category]");
 
-  $filters.on("click", function (e) {
+  $filters.on("click", function(e) {
     e.preventDefault();
     var $this = $(this);
 
@@ -147,8 +157,8 @@ $(window).on("load", function () {
         .fadeOut()
         .finish()
         .promise()
-        .done(function () {
-          $boxes.each(function (i) {
+        .done(function() {
+          $boxes.each(function(i) {
             $(this)
               .addClass("is-animated")
               .delay(i++ * 200)
@@ -161,10 +171,10 @@ $(window).on("load", function () {
         .fadeOut()
         .finish()
         .promise()
-        .done(function () {
+        .done(function() {
           $boxes
             .filter('[data-category = "' + $filterColor + '"]')
-            .each(function (i) {
+            .each(function(i) {
               $(this)
                 .addClass("is-animated")
                 .delay(i++ * 200)
@@ -173,14 +183,41 @@ $(window).on("load", function () {
         });
     }
   });
-  $('.container-overlay #globalgamejam').append(globalgamejam);
-  $('.demo-3').on('click', function() {
-    $('#overlay-effect').removeClass('animate-down').addClass('animate-up');
-    $('#globalgamejam').delay(700).show(300);
-  });
-  $('.close-btn').on('click', function(){
-    $('#overlay-effect').removeClass('animate-up').addClass('animate-down');
-    $('.container-overlay').children().delay(700).hide(300);
+  $("#animatedModal").append(globalgamejam);
+  //$(".demo-3").on("click", function() {
+    //$("#globalgamejam").show();
+    console.log("test");
+    $("#demo01").animatedModal();
+    // $("#globalgamejam_link").animatedModal();
+    // $("#globalgamejam").animatedModal({
+    //   beforeOpen: function() {
+    //     console.log('does this work?');
+    //     $("#overlay-effect")
+    //       .addClass("animate-up")
+    //       .removeClass("animate-down"),
+    //       $("#" + this.modalTarget).css({
+    //         animationDelay: ".5s",
+    //         animationFillMode: "both"
+    //       });
+    //   },
+    //   animatedIn: "fadeIn",
+    //   animatedOut: "fadeOut",
+    //   animationDuration: "0s"
+    // });
+    // $('#overlay-effect').animatedModal({
+    //   beforeOpen:function(){
+    //     console.log('test');
+    //   }
+
+    // });
+    // $('#overlay-effect').removeClass('animate-down').addClass('animate-up');
+    // $('#globalgamejam').delay(550).show(500);
+ // });
+  $(".close-btn").on("click", function() {
+    //$('#overlay-effect').removeClass('animate-up').addClass('animate-down');
+    // $(".container-overlay")
+    //   .children()
+    //   .hide();
   });
 });
 // import 'font-awesome';
