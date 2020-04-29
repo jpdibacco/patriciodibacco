@@ -172,7 +172,7 @@
 	.grid { grid-template-columns: 100%; margin-top: 3em; }
 	.grid__item { margin: 0 0 3em; }
 	.grid__item:nth-child(odd) { margin-top: 0; }
-	.grid__item-title, .grid__item:nth-child(odd) .grid__item-title { font-size: 2em; text-align: center; width: 100%; padding: 0; top: 20%; }
+	.grid__item-title, .grid__item:nth-child(odd) .grid__item-title { font-size: 2em; text-align: center; width: 85%; padding: 0; top: 20%; }
 }
 
 /* Glitch styles */

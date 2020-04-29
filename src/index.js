@@ -193,11 +193,14 @@ $(window).on("load", function() {
       animatedIn: 'fadeIn',
       animatedOut: 'fadeOut',
       animationDuration: '0s',
+      animationFillMode: 'both',
       beforeOpen: function(){
         $('#overlay-effect').addClass('animate-up').removeClass('animate-down');
+        $("#" + this.modalTarget).css({
+          animationDelay: ".5s",
+          animationFillMode: "both"
+        })
       },
-      animationDelay:'1s',
-      animationFillMode: 'both',
       afterOpen: function() {
         $("#" + this.modalTarget).css({
             animationFillMode: "none"
