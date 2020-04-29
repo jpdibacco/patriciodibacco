@@ -190,6 +190,7 @@ $(window).on("load", function() {
     //$("#globalgamejam").show();
     console.log("test");
     $("#demo01").animatedModal({
+      color:'#5a5a5a',
       animatedIn: 'fadeIn',
       animatedOut: 'fadeOut',
       animationDuration: '0s',
