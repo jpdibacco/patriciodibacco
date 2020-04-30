@@ -24,7 +24,7 @@ import "animate.css";
 document.head.insertAdjacentHTML("afterbegin", header);
 document.getElementById('navigation').insertAdjacentHTML('afterbegin', navbar);
 OfflinePluginRuntime.install();
-const ps = new PerfectScrollbar("#mainpage", {
+const ps = new PerfectScrollbar("#mainpage",{
   wheelSpeed: 3,
   wheelPropagation: true,
   swipeEasing: true
@@ -197,6 +197,11 @@ $(window).on("load", function() {
       animationFillMode: 'both',
       beforeOpen: function(){
         $('#overlay-effect').addClass('animate-up').removeClass('animate-down');
+        const ps = new PerfectScrollbar(".details",{
+          wheelSpeed: 3,
+          wheelPropagation: true,
+          swipeEasing: true
+        });
         $("#" + this.modalTarget).css({
           animationDelay: ".5s",
           animationFillMode: "both"
