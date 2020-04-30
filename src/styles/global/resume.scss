@@ -1,4 +1,4 @@
-#resume {
+#resume, #contact {
   margin: 70px 0;
   padding: 0 120px;
 }
@@ -1683,20 +1683,20 @@ hr {
   }
 }
 
-#contact .contact-section address,
-#contact .contact-section ul {
+ .contact-section address,
+ .contact-section ul {
   margin: 0
 }
 
-#contact .contact-section .contact-form .content-title {
+ .contact-section .contact-form .content-title {
   margin-bottom: 22px
 }
 
-#contact .contact-section .contact-form .form-group {
+ .contact-section .contact-form .form-group {
   margin-bottom: 25px
 }
 
-#contact .contact-section .contact-form .form-group .form-control {
+ .contact-section .contact-form .form-group .form-control {
   background-color: #161616;
   border: none;
   border-bottom: 1px solid #1d1d1d;
@@ -1706,110 +1706,110 @@ hr {
   padding: 9px 14px
 }
 
-// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill,
-// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:active,
-// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:focus,
-// #contact .contact-section .contact-form .form-group .form-control:-webkit-autofill:hover {
-//   -webkit-box-shadow: 0 0 0 1000px #0b0b0b inset;
-//   -webkit-text-fill-color: #777 !important;
-//   -webkit-transition: background-color 5000s ease-in-out 0s;
-//   transition: background-color 5000s ease-in-out 0s
-// }
+ .contact-section .contact-form .form-group .form-control:-webkit-autofill,
+ .contact-section .contact-form .form-group .form-control:-webkit-autofill:active,
+ .contact-section .contact-form .form-group .form-control:-webkit-autofill:focus,
+ .contact-section .contact-form .form-group .form-control:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px #0b0b0b inset;
+  -webkit-text-fill-color: #777 !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s
+}
 
-#contact .contact-section .contact-form .form-group .form-control::-webkit-input-placeholder {
+ .contact-section .contact-form .form-group .form-control::-webkit-input-placeholder {
   color: #777
 }
 
-#contact .contact-section .contact-form .form-group .form-control::-moz-placeholder {
+ .contact-section .contact-form .form-group .form-control::-moz-placeholder {
   color: #777
 }
 
-#contact .contact-section .contact-form .form-group .form-control:-ms-input-placeholder {
+ .contact-section .contact-form .form-group .form-control:-ms-input-placeholder {
   color: #777
 }
 
-#contact .contact-section .contact-form .form-group .form-control::-ms-input-placeholder {
+ .contact-section .contact-form .form-group .form-control::-ms-input-placeholder {
   color: #777
 }
 
-#contact .contact-section .contact-form .form-group .form-control,
-#contact .contact-section .contact-form .form-group .form-control::placeholder {
+ .contact-section .contact-form .form-group .form-control,
+ .contact-section .contact-form .form-group .form-control::placeholder {
   color: #777
 }
 
-#contact .contact-section .contact-form .form-group .form-control:focus {
+ .contact-section .contact-form .form-group .form-control:focus {
   box-shadow: none
 }
 
-#contact .contact-section .contact-form .form-group.form-message #contact-message {
+ .contact-section .contact-form .form-group.form-message -message {
   height: auto
 }
 
-#contact .contact-section .contact-form .form-submit #contact-submit {
+ .contact-section .contact-form .form-submit -submit {
   padding: 10px 26px
 }
 
-#contact .contact-section .contact-form .form-submit #contact-submit.wait {
+ .contact-section .contact-form .form-submit -submit.wait {
   background-color: #777 !important;
   border-color: #777 !important
 }
 
-#contact .contact-section .contact-form .form-submit #contact-submit.success {
+ .contact-section .contact-form .form-submit -submit.success {
   background-color: #28a745 !important;
   border-color: #28a745 !important
 }
 
-#contact .contact-section .contact-form .form-submit #contact-submit.error {
+ .contact-section .contact-form .form-submit -submit.error {
   background-color: #dc3545 !important;
   border-color: #dc3545 !important
 }
 
-#contact .contact-section .contact-form .form-submit .contact-feedback {
+ .contact-section .contact-form .form-submit .contact-feedback {
   display: none;
   margin: 0;
   margin-top: 8px
 }
 
-#contact .contact-section .contact-form .form-submit .contact-feedback.success {
+ .contact-section .contact-form .form-submit .contact-feedback.success {
   color: #28a745
 }
 
-#contact .contact-section .contact-form .form-submit .contact-feedback.error {
+ .contact-section .contact-form .form-submit .contact-feedback.error {
   color: #dc3545
 }
 
-#contact .contact-section .contact-info {
+ .contact-section .contact-info {
   padding-left: 15px
 }
 
-#contact .contact-section .contact-info .info-description {
+ .contact-section .contact-info .info-description {
   font-size: 15px;
   margin-bottom: 28px
 }
 
-#contact .contact-section .contact-info .list-info>li:first-child .info-icon {
+ .contact-section .contact-info .list-info>li:first-child .info-icon {
   margin-bottom: 13px
 }
 
-#contact .contact-section .contact-info .list-info>li:first-child .info-details {
+ .contact-section .contact-info .list-info>li:first-child .info-details {
   padding-top: 0
 }
 
-#contact .contact-section .contact-info .list-info>li:last-child .info-icon {
+ .contact-section .contact-info .list-info>li:last-child .info-icon {
   margin-top: 13px
 }
 
-#contact .contact-section .contact-info .list-info>li:last-child .info-details {
+ .contact-section .contact-info .list-info>li:last-child .info-details {
   padding-bottom: 0
 }
 
-#contact .contact-section .contact-info .list-info .info-icon {
+ .contact-section .contact-info .list-info .info-icon {
   font-size: 36px;
   margin-right: 50px;
   position: relative
 }
 
-#contact .contact-section .contact-info .list-info .info-icon i {
+ .contact-section .contact-info .list-info .info-icon i {
   -webkit-transform: translate(0, -50%);
   left: 0;
   line-height: 100%;
@@ -1818,44 +1818,44 @@ hr {
   transform: translate(0, -50%)
 }
 
-#contact .contact-section .contact-info .list-info .info-details {
+ .contact-section .contact-info .list-info .info-details {
   border-left: 2px solid rgba(255, 255, 255, .15);
   padding: 12px 0 12px 22px
 }
 
-#contact .contact-section .contact-info .list-info .info-details .info-type {
+ .contact-section .contact-info .list-info .info-details .info-type {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 0
 }
 
-#contact .contact-section .contact-info .list-info .info-details .info-value a {
+ .contact-section .contact-info .list-info .info-details .info-value a {
   color: #9f9f9f !important
 }
 
-#contact .contact-section .contact-info .list-info .info-details .info-value a:focus,
-#contact .contact-section .contact-info .list-info .info-details .info-value a:hover {
+ .contact-section .contact-info .list-info .info-details .info-value a:focus,
+ .contact-section .contact-info .list-info .info-details .info-value a:hover {
   color: #797979 !important
 }
 
 @media (max-width:1199.98px) {
-  #contact .contact-section .contact-form .form-group {
+   .contact-section .contact-form .form-group {
     margin-bottom: 35px
   }
 }
 
 @media (max-width:991.98px) {
-  #contact .contact-section .contact-form {
+   .contact-section .contact-form {
     margin-bottom: 45px
   }
 
-  #contact .contact-section .contact-info {
+   .contact-section .contact-info {
     padding-left: 0
   }
 }
 
 @media (max-width:767.98px) {
-  #contact .contact-section .contact-info .info-description {
+   .contact-section .contact-info .info-description {
     font-size: 14px
   }
 }
@@ -2109,11 +2109,11 @@ a:not(.btn):hover {
   background-color: #009e66
 }
 
-#contact .contact-section .contact-form .form-group .form-control:focus {
+ .contact-section .contact-form .form-group .form-control:focus {
   border-bottom: 1px solid #00d187
 }
 
-#contact .contact-section .contact-info .list-info .info-icon i {
+ .contact-section .contact-info .list-info .info-icon i {
   color: #009e66
 }
 

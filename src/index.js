@@ -16,6 +16,7 @@ import "./styles/global/perfectscrollbar.scss";
 import header from "./views/header.html";
 import navbar from "./views/navbar.html";
 import resume from "./views/resume.html";
+import contact from "./views/contact.html";
 import footer from "./views/footer.html";
 import portfolio from "./views/portfoliov2.html";
 import globalgamejam from "./views/global_game_jam.html";
@@ -112,6 +113,7 @@ $(window).on("load", function() {
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
   document.getElementById("resume").insertAdjacentHTML("afterbegin", resume);
+  document.getElementById("contact").insertAdjacentHTML("afterbegin", contact);
   document.getElementById("footer").insertAdjacentHTML("afterbegin", footer);
   document
     .getElementById("portfolio")
@@ -226,6 +228,40 @@ $(window).on("load", function() {
         })
       }
     });
+    // form submit:
+    var form = document.getElementById("contact-form");
+    var button = document.getElementById("contact-submit");
+    var status = document.getElementById("form-status");
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "Thanks!";
+    }
+    function error() {
+      status.innerHTML = "Oops! There was a problem.";
+    }
+    function sendbyajax(method, url, data, success, error) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          success(xhr.response, xhr.responseType);
+        } else {
+          error(xhr.status, xhr.response, xhr.responseType);
+        }
+      };
+      xhr.send(data);
+    }
+     // handle the form submission event
+
+     form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      sendbyajax(form.method, form.action, data, success, error);
+    });
+
 });
 // import 'font-awesome';
 // import 'magnific-popup';
