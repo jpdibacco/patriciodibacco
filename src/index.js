@@ -236,9 +236,11 @@ $(window).on("load", function() {
       form.reset();
       button.style = "display: none ";
       status.innerHTML = "Thanks!";
+      status.style = "display: block";
     }
     function error() {
       status.innerHTML = "Oops! There was a problem.";
+      status.style = "display: block";
     }
     function sendbyajax(method, url, data, success, error) {
       var xhr = new XMLHttpRequest();
