@@ -20,19 +20,20 @@ import contact from "./views/contact.html";
 import footer from "./views/footer.html";
 import portfolio from "./views/portfoliov2.html";
 import globalgamejam from "./views/global_game_jam.html";
+import lightpainting from "./views/light_painting.html";
 import "animate.css";
 
 document.head.insertAdjacentHTML("afterbegin", header);
-document.getElementById('navigation').insertAdjacentHTML('afterbegin', navbar);
+document.getElementById("navigation").insertAdjacentHTML("afterbegin", navbar);
 OfflinePluginRuntime.install();
-const ps = new PerfectScrollbar("#mainpage",{
+const ps = new PerfectScrollbar("#mainpage", {
   wheelSpeed: 3,
   wheelPropagation: true,
   swipeEasing: true
 });
-window.mobileCheck = function() {
+window.mobileCheck = function () {
   let check = false;
-  (function(a) {
+  (function (a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
         a
@@ -55,7 +56,7 @@ if (mobileCheck() == true) {
   // });
 }
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", particlesConfig, function() {
+particlesJS.load("particles-js", particlesConfig, function () {
   // window.pJSDom[0].pJS.particles.color.value = "random";
   // console.log("callback - particles.js config loaded");
   // if(mobileCheck() == true){
@@ -64,7 +65,7 @@ particlesJS.load("particles-js", particlesConfig, function() {
   //   window.pJSDom[0].pJS.fn.particlesRefresh();
   // }
 });
-var TxtType = function(el, toRotate, period) {
+var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -74,7 +75,7 @@ var TxtType = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+TxtType.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -102,11 +103,11 @@ TxtType.prototype.tick = function() {
     delta = 500;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
-$(window).on("load", function() {
+$(window).on("load", function () {
   //window.pJSDom[0].pJS.fn.particlesRefresh();
   require("animatedmodal");
   //$.getScript('./scripts/animatedModal.min.js');
@@ -115,13 +116,10 @@ $(window).on("load", function() {
   document.getElementById("resume").insertAdjacentHTML("afterbegin", resume);
   document.getElementById("contact").insertAdjacentHTML("afterbegin", contact);
   document.getElementById("footer").insertAdjacentHTML("afterbegin", footer);
-  document
-    .getElementById("portfolio")
-    .insertAdjacentHTML("afterbegin", portfolio);
+  document.getElementById("portfolio").insertAdjacentHTML("afterbegin", portfolio);
   $("main").css("visibility", "visible");
   imagesLoaded(
-    ".glitch__img",
-    {
+    ".glitch__img", {
       background: true
     },
     () => {
@@ -146,7 +144,7 @@ $(window).on("load", function() {
   var $filters = $(".filter [data-filter]"),
     $boxes = $(".boxes [data-category]");
 
-  $filters.on("click", function(e) {
+  $filters.on("click", function (e) {
     e.preventDefault();
     var $this = $(this);
 
@@ -161,8 +159,8 @@ $(window).on("load", function() {
         .fadeOut()
         .finish()
         .promise()
-        .done(function() {
-          $boxes.each(function(i) {
+        .done(function () {
+          $boxes.each(function (i) {
             $(this)
               .addClass("is-animated")
               .delay(i++ * 200)
@@ -175,10 +173,10 @@ $(window).on("load", function() {
         .fadeOut()
         .finish()
         .promise()
-        .done(function() {
+        .done(function () {
           $boxes
             .filter('[data-category = "' + $filterColor + '"]')
-            .each(function(i) {
+            .each(function (i) {
               $(this)
                 .addClass("is-animated")
                 .delay(i++ * 200)
@@ -187,83 +185,101 @@ $(window).on("load", function() {
         });
     }
   });
-  $("#animatedModal").append(globalgamejam);
+  $("#modal-00").append(globalgamejam);
+  $("#modal-01").append(lightpainting);
+  function perfectScrollGen(num){
+    const ps = new PerfectScrollbar(".details-0" + num, {
+      wheelSpeed: 3,
+      wheelPropagation: true,
+      swipeEasing: true
+    });
+  }
   //$(".demo-3").on("click", function() {
-    //$("#globalgamejam").show();
-    console.log("test");
-    $("#demo01").animatedModal({
-      color:'#5a5a5a',
-      animatedIn: 'fadeIn',
-      animatedOut: 'fadeOut',
-      animationDuration: '0s',
-      animationFillMode: 'both',
-      beforeOpen: function(){
-        $('#overlay-effect').addClass('animate-up').removeClass('animate-down');
-        const ps = new PerfectScrollbar(".details",{
-          wheelSpeed: 3,
-          wheelPropagation: true,
-          swipeEasing: true
-        });
+  //$("#globalgamejam").show();
+  console.log("test");
+  for (var i = 0; i < 2; i++) {
+    perfectScrollGen(i);
+    $("#demo0" + i).animatedModal({
+      modalTarget: "modal-0" + i,
+      color: "#5a5a5a",
+      animatedIn: "fadeIn",
+      animatedOut: "fadeOut",
+      animationDuration: "0s",
+      animationFillMode: "both",
+      beforeOpen: function () {
+        $("#overlay-effect")
+          .addClass("animate-up")
+          .removeClass("animate-down");
+        // const ps = new PerfectScrollbar(".details-0" + i, {
+        //   wheelSpeed: 3,
+        //   wheelPropagation: true,
+        //   swipeEasing: true
+        // });
         $("#" + this.modalTarget).css({
           animationDelay: ".5s",
           animationFillMode: "both"
-        })
+        });
       },
-      afterOpen: function() {
+      afterOpen: function () {
         $("#" + this.modalTarget).css({
-            animationFillMode: "none"
-        })
+          animationFillMode: "none"
+        });
       },
-      beforeClose: function() {
-        $("#overlay-effect").addClass("animate-down").removeClass("animate-up"); 
+      beforeClose: function () {
+        $("#overlay-effect")
+          .addClass("animate-down")
+          .removeClass("animate-up");
         $("#" + this.modalTarget).css({
-            animationDelay: ".5s",
-            animationFillMode: "both"
-        })
+          animationDelay: ".5s",
+          animationFillMode: "both"
+        });
       },
-      afterClose: function() {
+      afterClose: function () {
         $("#" + this.modalTarget).css({
-            animationFillMode: "none",
-            opacity:0
-        })
+          animationFillMode: "none",
+          opacity: 0
+        });
       }
     });
-    // form submit:
-    var form = document.getElementById("contact-form");
-    var button = document.getElementById("contact-submit");
-    var status = document.getElementById("form-status");
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Thanks!";
-      status.style = "display: block";
-    }
-    function error() {
-      status.innerHTML = "Oops! There was a problem.";
-      status.style = "display: block";
-    }
-    function sendbyajax(method, url, data, success, error) {
-      var xhr = new XMLHttpRequest();
-      xhr.open(method, url);
-      xhr.setRequestHeader("Accept", "application/json");
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-          success(xhr.response, xhr.responseType);
-        } else {
-          error(xhr.status, xhr.response, xhr.responseType);
-        }
-      };
-      xhr.send(data);
-    }
-     // handle the form submission event
+  }
+  // form submit:
+  var form = document.getElementById("contact-form");
+  var button = document.getElementById("contact-submit");
+  var status = document.getElementById("form-status");
 
-     form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      sendbyajax(form.method, form.action, data, success, error);
-    });
+  function success() {
+    form.reset();
+    button.style = "display: none ";
+    status.innerHTML = "Thanks!";
+    status.style = "display: block";
+  }
 
+  function error() {
+    status.innerHTML = "Oops! There was a problem.";
+    status.style = "display: block";
+  }
+
+  function sendbyajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+  // handle the form submission event
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var data = new FormData(form);
+    sendbyajax(form.method, form.action, data, success, error);
+  });
 });
 // import 'font-awesome';
 // import 'magnific-popup';
