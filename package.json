@@ -26,6 +26,7 @@
     "compression-webpack-plugin": "^3.1.0",
     "copy-webpack-plugin": "^5.1.1",
     "cssnano": "^4.1.10",
+    "ekko-lightbox": "^5.3.0",
     "favicons-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
     "imagemin-mozjpeg": "^8.0.0",

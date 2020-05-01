@@ -31,9 +31,9 @@ const ps = new PerfectScrollbar("#mainpage", {
   wheelPropagation: true,
   swipeEasing: true
 });
-window.mobileCheck = function () {
+window.mobileCheck = function() {
   let check = false;
-  (function (a) {
+  (function(a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
         a
@@ -56,7 +56,7 @@ if (mobileCheck() == true) {
   // });
 }
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", particlesConfig, function () {
+particlesJS.load("particles-js", particlesConfig, function() {
   // window.pJSDom[0].pJS.particles.color.value = "random";
   // console.log("callback - particles.js config loaded");
   // if(mobileCheck() == true){
@@ -65,7 +65,7 @@ particlesJS.load("particles-js", particlesConfig, function () {
   //   window.pJSDom[0].pJS.fn.particlesRefresh();
   // }
 });
-var TxtType = function (el, toRotate, period) {
+var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -75,7 +75,7 @@ var TxtType = function (el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function () {
+TxtType.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -103,23 +103,27 @@ TxtType.prototype.tick = function () {
     delta = 500;
   }
 
-  setTimeout(function () {
+  setTimeout(function() {
     that.tick();
   }, delta);
 };
-$(window).on("load", function () {
+$(window).on("load", function() {
   //window.pJSDom[0].pJS.fn.particlesRefresh();
   require("animatedmodal");
+  require("ekko-lightbox");
   //$.getScript('./scripts/animatedModal.min.js');
   $("#loading").fadeOut(700);
   $("header").css("visibility", "visible");
   document.getElementById("resume").insertAdjacentHTML("afterbegin", resume);
   document.getElementById("contact").insertAdjacentHTML("afterbegin", contact);
   document.getElementById("footer").insertAdjacentHTML("afterbegin", footer);
-  document.getElementById("portfolio").insertAdjacentHTML("afterbegin", portfolio);
+  document
+    .getElementById("portfolio")
+    .insertAdjacentHTML("afterbegin", portfolio);
   $("main").css("visibility", "visible");
   imagesLoaded(
-    ".glitch__img", {
+    ".glitch__img",
+    {
       background: true
     },
     () => {
@@ -144,7 +148,7 @@ $(window).on("load", function () {
   var $filters = $(".filter [data-filter]"),
     $boxes = $(".boxes [data-category]");
 
-  $filters.on("click", function (e) {
+  $filters.on("click", function(e) {
     e.preventDefault();
     var $this = $(this);
 
@@ -159,8 +163,8 @@ $(window).on("load", function () {
         .fadeOut()
         .finish()
         .promise()
-        .done(function () {
-          $boxes.each(function (i) {
+        .done(function() {
+          $boxes.each(function(i) {
             $(this)
               .addClass("is-animated")
               .delay(i++ * 200)
@@ -173,10 +177,10 @@ $(window).on("load", function () {
         .fadeOut()
         .finish()
         .promise()
-        .done(function () {
+        .done(function() {
           $boxes
             .filter('[data-category = "' + $filterColor + '"]')
-            .each(function (i) {
+            .each(function(i) {
               $(this)
                 .addClass("is-animated")
                 .delay(i++ * 200)
@@ -187,7 +191,7 @@ $(window).on("load", function () {
   });
   $("#modal-00").append(globalgamejam);
   $("#modal-01").append(lightpainting);
-  function perfectScrollGen(num){
+  function perfectScrollGen(num) {
     const ps = new PerfectScrollbar(".details-0" + num, {
       wheelSpeed: 3,
       wheelPropagation: true,
@@ -206,7 +210,7 @@ $(window).on("load", function () {
       animatedOut: "fadeOut",
       animationDuration: "0s",
       animationFillMode: "both",
-      beforeOpen: function () {
+      beforeOpen: function() {
         $("#overlay-effect")
           .addClass("animate-up")
           .removeClass("animate-down");
@@ -220,12 +224,12 @@ $(window).on("load", function () {
           animationFillMode: "both"
         });
       },
-      afterOpen: function () {
+      afterOpen: function() {
         $("#" + this.modalTarget).css({
           animationFillMode: "none"
         });
       },
-      beforeClose: function () {
+      beforeClose: function() {
         $("#overlay-effect")
           .addClass("animate-down")
           .removeClass("animate-up");
@@ -234,7 +238,7 @@ $(window).on("load", function () {
           animationFillMode: "both"
         });
       },
-      afterClose: function () {
+      afterClose: function() {
         $("#" + this.modalTarget).css({
           animationFillMode: "none",
           opacity: 0
@@ -263,7 +267,7 @@ $(window).on("load", function () {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = function() {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         success(xhr.response, xhr.responseType);
@@ -275,10 +279,15 @@ $(window).on("load", function () {
   }
   // handle the form submission event
 
-  form.addEventListener("submit", function (ev) {
+  form.addEventListener("submit", function(ev) {
     ev.preventDefault();
     var data = new FormData(form);
     sendbyajax(form.method, form.action, data, success, error);
+  });
+  //lightbox:
+  $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
   });
 });
 // import 'font-awesome';

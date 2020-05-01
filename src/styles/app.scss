@@ -2,6 +2,7 @@
 @import "./global/carousel.scss";
 @import "./global/glitch.scss";
 @import "./global/resume.scss";
+@import "~ekko-lightbox/dist/ekko-lightbox.css";
 // @import "font-awesome";
 // @import "animate";
 // @import "magnific-popup";
@@ -376,4 +377,7 @@ div#particles-js {
 }
 footer{
   padding-bottom: 86px;
+}
+.ekko-lightbox{
+  z-index: 9999;
 }
