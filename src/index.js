@@ -21,6 +21,8 @@ import footer from "./views/footer.html";
 import portfolio from "./views/portfoliov2.html";
 import globalgamejam from "./views/global_game_jam.html";
 import lightpainting from "./views/light_painting.html";
+import lagadoll from "./views/laga_doll.html";
+import "./videos/lagadoll.mp4";
 import "animate.css";
 
 document.head.insertAdjacentHTML("afterbegin", header);
@@ -191,6 +193,7 @@ $(window).on("load", function() {
   });
   $("#modal-00").append(globalgamejam);
   $("#modal-01").append(lightpainting);
+  $("#modal-02").append(lagadoll);
   function perfectScrollGen(num) {
     const ps = new PerfectScrollbar(".details-0" + num, {
       wheelSpeed: 3,
@@ -201,7 +204,7 @@ $(window).on("load", function() {
   //$(".demo-3").on("click", function() {
   //$("#globalgamejam").show();
   console.log("test");
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i < 3; i++) {
     perfectScrollGen(i);
     $("#demo0" + i).animatedModal({
       modalTarget: "modal-0" + i,
