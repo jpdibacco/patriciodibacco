@@ -4,8 +4,8 @@
 	--color-link: #454847;
 	--color-link-hover: #fff;
 	--color-info: #454847;
-	--glitch-width: 40vmax;
-	--glitch-height: calc(40vmax * 1.25);
+	--glitch-width: 35vmax;
+	--glitch-height: calc(30vmax * 1.25);
 	--color-title: #fff;
 	--color-subtitle: #30efbf;
 }
@@ -130,7 +130,7 @@
 .grid__item-title {
 	position: absolute;
 	margin: 0;
-	font-size: 4.5vw;
+	font-size: 3.5vw;
 	color: var(--color-title);
 	// font-family: 'Barlow', sans-serif;
 	font-weight: 800 !important;
